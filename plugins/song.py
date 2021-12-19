@@ -36,7 +36,7 @@ def a(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('`𝐀𝐦 𝐬𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐚 𝐬𝐨𝐧𝐠 𝐟𝐨𝐫 𝐲𝐨𝐮.... 𝐈 𝐋𝐔𝐁 𝐔🙂`')
+    m = message.reply('`𝐀𝐦 𝐬𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐚 𝐬𝐨𝐧𝐠 𝐟𝐨𝐫 𝐲𝐨𝐮....`')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -75,7 +75,7 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("`𝐀𝐦 𝐮𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚 𝐬𝐨𝐧𝐠 𝐟𝐢𝐫 𝐲𝐨𝐮.... 𝐈 𝐋𝐔𝐁 𝐔🙂`")
+    m.edit("`𝐀𝐦 𝐮𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚 𝐬𝐨𝐧𝐠 𝐟𝐢𝐫 𝐲𝐨𝐮....`")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
